@@ -1,0 +1,5 @@
+@mixin tablet-landscape-desktop-up {
+    @media (min-width: 600px) {
+        @content;
+    }
+}

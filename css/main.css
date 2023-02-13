@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+@media (min-width: 600px) {
+  body {
+    height: auto;
+  }
+}/*# sourceMappingURL=main.css.map */
