@@ -1,5 +1,17 @@
-@mixin tablet-landscape-desktop-up {
+@mixin medium-tablet-up {
     @media (min-width: 600px) {
         @content;
     }
+}
+
+@mixin large-tablet-landscape-down {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin flexShortCut($justifyContentValue, $alignItemsValue) {
+    display: flex;
+    align-items: $alignItemsValue;
+    justify-content: $justifyContentValue;
 }

@@ -1,0 +1,21 @@
+.button {
+    background-color: $cyan;
+    color: white;
+    font-weight: bold;
+    font-family: $mainFont;
+    cursor: pointer;
+}
+
+.rounded-btn {
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    margin: 0 auto;
+    display: block;
+}
+
+.section-description {
+    color: $grayishViolet;
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 1.5rem 0 2rem 0;
+}

@@ -1,0 +1,57 @@
+.get-started {
+
+    @include flexShortCut(center, center);
+    flex-flow: column nowrap;
+
+    width: 100%;
+
+    @include medium-tablet-up {
+        flex-flow: row-reverse nowrap;
+        width: 90%;
+        margin-right: -10%;
+    }
+}
+
+.get-started-img {
+
+    width: 100%;
+    overflow-x: hidden;
+
+    img {
+        width: 125%;
+        transform: translateX(5%);
+    }
+}
+
+.get-started-text {
+
+    width: 90%;
+    margin: 2rem auto 0 auto;
+
+    h1 {
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center;
+        line-height: 120%;
+    }
+
+    @include medium-tablet-up {
+        h1 {
+            font-size: clamp(3rem, 7vw, 8rem);
+            text-align: start;
+            // line-height: 10rem;
+        }
+
+        p {
+            text-align: start;
+            font-size: clamp(1.4rem, 2vw, 2rem);
+        }
+
+        button {
+            margin: 0;
+            font-size: clamp(1.2rem, 2vw,2rem);
+            padding: 1.5rem 3rem;
+            margin-top: 4rem;
+        }
+    }
+}

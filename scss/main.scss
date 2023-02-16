@@ -1,2 +1,31 @@
 @import "functions";
+@import "variables";
 @import "reset";
+
+@import "globalStyles";
+
+@import "components/navigation";
+@import "components/getStarted";
+@import "components/toShortenLinks";
+@import "components/advancedStatistics";
+@import "components/boostLinks";
+@import "components/footer";
+
+#main-page-content {
+    width: 100%;
+}
+
+header {
+    @include flexShortCut(flex-start, center);
+    flex-flow: column nowrap;
+
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+}
