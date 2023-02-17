@@ -4,8 +4,11 @@
     flex-flow: column nowrap;
     gap: 4rem;
 
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    padding-top: 12rem;
+    margin-top: -12rem;
+    background-color: hsla(258, 7%, 63%, 0.15);
 
     h2 {
         text-align: center;
@@ -17,19 +20,45 @@
     }
 }
 
-.advanced-statistics-cards-wrapper {
-    display: grid;
-    gap: 4rem;
+.advanced-statistics-cards-area {
+    @include flexShortCut(center, center);
+    flex-flow: column nowrap;
+    gap: 7rem;
+    
+    width: 90%;
+    margin: 5rem 0;
+    position: relative;
 
     @include medium-tablet-up {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        flex-flow: row nowrap;
+
+        .advanced-statistics-card:nth-child(1) {
+            margin-top: -5rem;
+        }
+
+        .advanced-statistics-card:nth-child(3) {
+            margin-bottom: -5rem;
+        }
+    }
+}
+
+.advanced-statistics-visual-detail {
+    width: .7rem;
+    height: 100%;
+    background-color: $cyan;
+
+    position: absolute;
+    z-index: -10;
+
+    @include medium-tablet-up {
+        width: 100%;
+        height: .7rem;
     }
 }
 
 .advanced-statistics-card {
     width: 100%;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    background-color: white;
     border-radius: .6rem;
     padding: 0 2.5rem 2.5rem 2.5rem;
 

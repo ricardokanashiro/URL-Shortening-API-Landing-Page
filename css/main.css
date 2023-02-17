@@ -236,8 +236,11 @@ button {
   justify-content: center;
   flex-flow: column nowrap;
   gap: 4rem;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  padding-top: 12rem;
+  margin-top: -12rem;
+  background-color: hsla(258deg, 7%, 63%, 0.15);
 }
 .advanced-statistics h2 {
   text-align: center;
@@ -249,20 +252,45 @@ button {
   }
 }
 
-.advanced-statistics-cards-wrapper {
-  display: grid;
-  gap: 4rem;
+.advanced-statistics-cards-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  gap: 7rem;
+  width: 90%;
+  margin: 5rem 0;
+  position: relative;
 }
 @media (min-width: 600px) {
-  .advanced-statistics-cards-wrapper {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+  .advanced-statistics-cards-area {
+    flex-flow: row nowrap;
+  }
+  .advanced-statistics-cards-area .advanced-statistics-card:nth-child(1) {
+    margin-top: -5rem;
+  }
+  .advanced-statistics-cards-area .advanced-statistics-card:nth-child(3) {
+    margin-bottom: -5rem;
+  }
+}
+
+.advanced-statistics-visual-detail {
+  width: 0.7rem;
+  height: 100%;
+  background-color: hsl(180deg, 66%, 49%);
+  position: absolute;
+  z-index: -10;
+}
+@media (min-width: 600px) {
+  .advanced-statistics-visual-detail {
+    width: 100%;
+    height: 0.7rem;
   }
 }
 
 .advanced-statistics-card {
   width: 100%;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  background-color: white;
   border-radius: 0.6rem;
   padding: 0 2.5rem 2.5rem 2.5rem;
 }
