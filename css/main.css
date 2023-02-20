@@ -268,7 +268,7 @@ button {
   height: 4rem;
   border-radius: 0.5rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 1215px) {
   .to-shorten-links {
     flex-flow: column nowrap;
     padding: 4rem;
@@ -284,7 +284,7 @@ button {
   }
   .to-shorten-links input, .to-shorten-links button {
     height: 5rem;
-    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
   }
 }
 
@@ -292,10 +292,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column nowrap;
   width: 100%;
   gap: 1.5rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 1215px) {
   .to-shorten-link-commands-area {
     flex-flow: row nowrap;
   }
@@ -309,27 +310,48 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-flow: column nowrap;
   background-color: white;
   width: 100%;
-  height: 6rem;
-  padding: 0 2rem;
   border-radius: 0.5rem;
   margin-top: 2rem;
+  padding: 1rem 0;
 }
 .shorted-link .input-link {
-  font-size: 1.6rem;
-  font-weight: bold;
+  width: 100%;
+  font-size: clamp(1rem, 4vw, 1.8rem);
+  word-wrap: break-word;
+  font-weight: 500;
+  border-bottom: 1px solid hsl(0deg, 0%, 75%);
+  padding: 0 1rem 1rem 1rem;
+}
+@media (min-width: 1215px) {
+  .shorted-link .input-link {
+    border-bottom: none;
+    width: 60%;
+  }
 }
 .shorted-link .output-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  width: 100%;
+  padding: 0 1rem;
+  margin-top: 1rem;
 }
 .shorted-link .output-link span {
-  font-size: 1.6rem;
+  font-size: clamp(1rem, 4vw, 1.8rem);
   color: hsl(180deg, 66%, 49%);
-  font-weight: bold;
+  word-wrap: break-word;
+  width: 100%;
+  font-weight: 500;
+}
+@media (min-width: 1215px) {
+  .shorted-link .output-link span {
+    width: auto;
+  }
 }
 .shorted-link .output-link button {
   background-color: hsl(180deg, 66%, 49%);
@@ -337,11 +359,30 @@ button {
   color: white;
   font-weight: bold;
   height: 3.5rem;
-  width: 9rem;
+  width: 100%;
   font-size: 1.4rem;
+}
+@media (min-width: 1215px) {
+  .shorted-link .output-link button {
+    width: 9rem;
+    flex-shrink: 0;
+  }
 }
 .shorted-link .output-link .active-link-btn {
   background-color: hsl(257deg, 27%, 26%);
+}
+@media (min-width: 1215px) {
+  .shorted-link .output-link {
+    flex-flow: row nowrap;
+    width: 35%;
+    margin: 0;
+  }
+}
+@media (min-width: 1215px) {
+  .shorted-link {
+    flex-flow: row nowrap;
+    gap: 5%;
+  }
 }
 
 .advanced-statistics {
@@ -482,7 +523,7 @@ button {
 footer {
   background-color: hsl(260deg, 8%, 14%);
   position: relative;
-  padding: 2rem 4rem 5rem 4rem;
+  padding: 2rem 4rem;
 }
 @media (min-width: 900px) {
   footer {
@@ -550,9 +591,7 @@ footer {
 .footer-attribuition {
   color: white;
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  padding: 2rem 0;
+  padding-top: 3rem;
 }
 .footer-attribuition a {
   color: rgb(185, 183, 183);

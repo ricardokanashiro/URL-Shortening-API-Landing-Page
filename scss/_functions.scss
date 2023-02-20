@@ -10,6 +10,12 @@
     }
 }
 
+@mixin large-desktop-up {
+    @media (min-width: 1215px) {
+        @content;
+    }
+}
+
 @mixin flexShortCut($justifyContentValue, $alignItemsValue) {
     display: flex;
     align-items: $alignItemsValue;

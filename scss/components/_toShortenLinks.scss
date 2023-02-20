@@ -28,7 +28,7 @@
         border-radius: .5rem;
     }
 
-    @include medium-tablet-up {
+    @include large-desktop-up {
         flex-flow: column nowrap;
         padding: 4rem;
         width: 80%;
@@ -45,18 +45,19 @@
 
         input, button {
             height: 5rem;
-            font-size: clamp(1.2rem, 2vw ,1.6rem);
+            font-size: clamp(1.2rem, 4vw ,1.6rem);
         }
     }
 }
 
 .to-shorten-link-commands-area {
     @include flexShortCut(center, center);
+    flex-flow: column nowrap;
 
     width: 100%;
     gap: 1.5rem;
 
-    @include medium-tablet-up {
+    @include large-desktop-up {
         flex-flow: row nowrap;
     }
 }
@@ -68,28 +69,48 @@
 .shorted-link {
 
     @include flexShortCut(space-between, center);
+    flex-flow: column nowrap;
 
     background-color: white;
     width: 100%;
-    height: 6rem;
-    padding: 0 2rem;
     border-radius: .5rem;
     margin-top: 2rem;
+    padding: 1rem 0;
 
     .input-link {
-        font-size: 1.6rem;
-        font-weight: bold;
+        width: 100%;
+        font-size: clamp(1rem, 4vw, 1.8rem);
+        word-wrap: break-word;
+        font-weight: 500;
+        border-bottom: 1px solid $gray;
+        padding: 0 1rem 1rem 1rem;
+
+        @include large-desktop-up {
+            border-bottom: none;
+            width: 60%;
+        }
     }
 
     .output-link {
 
         @include flexShortCut(center, center);
-        gap: 2rem;
+        flex-flow: column nowrap;
+        gap: 1rem;
+
+        width: 100%;
+        padding: 0 1rem;
+        margin-top: 1rem;
 
         span {
-            font-size: 1.6rem;
+            font-size: clamp(1rem, 4vw, 1.8rem);
             color: $cyan;
-            font-weight: bold;
+            word-wrap: break-word;
+            width: 100%;
+            font-weight: 500;
+
+            @include large-desktop-up {
+                width: auto;
+            }
         }
 
         button {
@@ -98,12 +119,28 @@
             color: white;
             font-weight: bold;
             height: 3.5rem;
-            width: 9rem;
+            width: 100%;
             font-size: 1.4rem;
+
+            @include large-desktop-up {
+                width: 9rem;
+                flex-shrink: 0;
+            }
         }
 
         .active-link-btn {
             background-color: $darkViolet;
         }
+
+        @include large-desktop-up {
+            flex-flow: row nowrap;
+            width: 35%;
+            margin: 0;
+        }
+    }
+
+    @include large-desktop-up {
+        flex-flow: row nowrap;
+        gap: 5%;
     }
 }
