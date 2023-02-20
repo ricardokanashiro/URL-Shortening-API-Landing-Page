@@ -61,6 +61,7 @@ button {
   justify-content: space-between;
   width: 90%;
   margin: 2rem 0;
+  position: relative;
 }
 
 .header-menu {
@@ -130,6 +131,64 @@ button {
   }
 }
 
+.active-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  position: absolute;
+  z-index: 1;
+  width: 95%;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  background-color: hsl(257deg, 27%, 26%);
+  top: 6rem;
+  right: 2.5%;
+}
+.active-menu .header-menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-flow: column nowrap;
+  gap: 0;
+  border-bottom: 1px solid hsl(0deg, 0%, 75%);
+}
+.active-menu .header-menu-list li {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.active-menu .header-menu-list li a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.active-menu .user-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+.active-menu .user-area button {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 4rem;
+  margin-top: 1rem;
+}
+.active-menu .user-area-login-btn {
+  background-color: transparent;
+}
+.active-menu .user-area-sign-up-btn {
+  background-color: hsl(180deg, 66%, 49%);
+  border-radius: 2rem;
+}
+
 .get-started {
   display: flex;
   align-items: center;
@@ -186,7 +245,6 @@ button {
   align-items: center;
   justify-content: center;
   flex-flow: column nowrap;
-  gap: 1.5rem;
   width: 90%;
   background-color: hsl(257deg, 27%, 26%);
   background-image: url("../../images/bg-shorten-mobile.svg");
@@ -212,7 +270,7 @@ button {
 }
 @media (min-width: 600px) {
   .to-shorten-links {
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     padding: 4rem;
     width: 80%;
     background-image: url("../../images/bg-shorten-desktop.svg");
@@ -230,6 +288,62 @@ button {
   }
 }
 
+.to-shorten-link-commands-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1.5rem;
+}
+@media (min-width: 600px) {
+  .to-shorten-link-commands-area {
+    flex-flow: row nowrap;
+  }
+}
+
+.to-short-link-list {
+  width: 100%;
+}
+
+.shorted-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  height: 6rem;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+.shorted-link .input-link {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.shorted-link .output-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.shorted-link .output-link span {
+  font-size: 1.6rem;
+  color: hsl(180deg, 66%, 49%);
+  font-weight: bold;
+}
+.shorted-link .output-link button {
+  background-color: hsl(180deg, 66%, 49%);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: bold;
+  height: 3.5rem;
+  width: 9rem;
+  font-size: 1.4rem;
+}
+.shorted-link .output-link .active-link-btn {
+  background-color: hsl(257deg, 27%, 26%);
+}
+
 .advanced-statistics {
   display: flex;
   align-items: center;
@@ -240,16 +354,14 @@ button {
   margin: 0 auto;
   padding-top: 12rem;
   margin-top: -12rem;
+  padding-bottom: 4rem;
   background-color: hsla(258deg, 7%, 63%, 0.15);
+  position: relative;
+  z-index: -1;
 }
 .advanced-statistics h2 {
   text-align: center;
   font-size: 2.3rem;
-}
-@media (min-width: 600px) {
-  .advanced-statistics {
-    width: 80%;
-  }
 }
 
 .advanced-statistics-cards-area {
@@ -271,6 +383,12 @@ button {
   }
   .advanced-statistics-cards-area .advanced-statistics-card:nth-child(3) {
     margin-bottom: -5rem;
+  }
+}
+@media (min-width: 600px) {
+  .advanced-statistics-cards-area {
+    width: 80%;
+    gap: 5%;
   }
 }
 
@@ -316,6 +434,23 @@ button {
   font-size: 1.2rem;
   margin: 1.5rem 0;
 }
+@media (min-width: 600px) {
+  .advanced-statistics-card {
+    flex-shrink: 0;
+    width: 30%;
+    max-height: 26rem;
+  }
+  .advanced-statistics-card img {
+    left: -30%;
+  }
+  .advanced-statistics-card h3 {
+    text-align: left;
+  }
+  .advanced-statistics-card p {
+    text-align: left;
+  }
+}
+
 .boost-links {
   width: 100%;
   background-color: hsl(257deg, 27%, 26%);
@@ -324,7 +459,6 @@ button {
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: right;
-  margin-top: 4rem;
 }
 .boost-links h2 {
   color: white;
@@ -350,7 +484,7 @@ footer {
   position: relative;
   padding: 2rem 4rem 5rem 4rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   footer {
     display: flex;
     align-items: flex-start;
@@ -374,7 +508,7 @@ footer {
   flex-flow: column nowrap;
   width: 100%;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .footer-services {
     display: flex;
     align-items: flex-start;
@@ -416,9 +550,9 @@ footer {
 .footer-attribuition {
   color: white;
   text-align: center;
-  padding: 2rem 0;
   position: absolute;
   bottom: 0;
+  padding: 2rem 0;
 }
 .footer-attribuition a {
   color: rgb(185, 183, 183);

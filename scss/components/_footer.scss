@@ -3,7 +3,7 @@ footer {
     position: relative;
     padding: 2rem 4rem 5rem 4rem;
 
-    @include medium-tablet-up {
+    @include large-tablet-landscape-up {
         @include flexShortCut(center, flex-start);
         flex-flow: row nowrap;
     }
@@ -26,7 +26,7 @@ footer {
 
     width: 100%;
 
-    @include medium-tablet-up {
+    @include large-tablet-landscape-up {
         @include flexShortCut(center, flex-start);
         flex-flow: row nowrap;
     }
@@ -68,9 +68,10 @@ footer {
 .footer-attribuition {
     color: white;
     text-align: center;
-    padding: 2rem 0;
     position: absolute;
     bottom: 0;
+    padding: 2rem 0;
+    // width: 100%;
 
     a {
         color: rgb(185, 183, 183);

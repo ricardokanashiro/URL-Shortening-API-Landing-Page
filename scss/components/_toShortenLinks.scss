@@ -2,7 +2,6 @@
 
     @include flexShortCut(center, center);
     flex-flow: column nowrap;
-    gap: 1.5rem;
 
     width: 90%;
     background-color: $darkViolet;
@@ -30,7 +29,7 @@
     }
 
     @include medium-tablet-up {
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
         padding: 4rem;
         width: 80%;
         background-image: url("../../images/bg-shorten-desktop.svg");
@@ -47,6 +46,64 @@
         input, button {
             height: 5rem;
             font-size: clamp(1.2rem, 2vw ,1.6rem);
+        }
+    }
+}
+
+.to-shorten-link-commands-area {
+    @include flexShortCut(center, center);
+
+    width: 100%;
+    gap: 1.5rem;
+
+    @include medium-tablet-up {
+        flex-flow: row nowrap;
+    }
+}
+
+.to-short-link-list {
+    width: 100%;
+}
+
+.shorted-link {
+
+    @include flexShortCut(space-between, center);
+
+    background-color: white;
+    width: 100%;
+    height: 6rem;
+    padding: 0 2rem;
+    border-radius: .5rem;
+    margin-top: 2rem;
+
+    .input-link {
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+
+    .output-link {
+
+        @include flexShortCut(center, center);
+        gap: 2rem;
+
+        span {
+            font-size: 1.6rem;
+            color: $cyan;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: $cyan;
+            font-family: $mainFont;
+            color: white;
+            font-weight: bold;
+            height: 3.5rem;
+            width: 9rem;
+            font-size: 1.4rem;
+        }
+
+        .active-link-btn {
+            background-color: $darkViolet;
         }
     }
 }
