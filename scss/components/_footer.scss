@@ -1,7 +1,7 @@
 footer {
     background-color: $veryDarkViolet;
     position: relative;
-    padding: 2rem 4rem;
+    padding: 2rem 4rem 4rem 4rem;
 
     @include large-tablet-landscape-up {
         @include flexShortCut(center, flex-start);
@@ -69,12 +69,14 @@ footer {
     color: white;
     text-align: center;
     padding-top: 3rem;
-    // position: absolute;
-    // bottom: 0;
-    // padding: 2rem 0;
-    // width: 100%;
 
     a {
         color: rgb(185, 183, 183);
+    }
+
+    @include medium-tablet-up {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 1rem;
     }
 }
