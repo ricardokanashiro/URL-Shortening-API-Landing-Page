@@ -247,7 +247,7 @@ button {
   flex-flow: column nowrap;
   width: 90%;
   background-color: hsl(257deg, 27%, 26%);
-  background-image: url("../../images/bg-shorten-mobile.svg");
+  background-image: url("../images/bg-shorten-mobile.svg");
   background-repeat: no-repeat;
   background-position-x: right;
   background-size: 75%;
@@ -273,7 +273,7 @@ button {
     flex-flow: column nowrap;
     padding: 4rem;
     width: 80%;
-    background-image: url("../../images/bg-shorten-desktop.svg");
+    background-image: url("../images/bg-shorten-desktop.svg");
     background-size: cover;
   }
   .to-shorten-links input {
@@ -496,7 +496,7 @@ button {
   width: 100%;
   background-color: hsl(257deg, 27%, 26%);
   padding: 6rem 0;
-  background-image: url("../../images/bg-boost-mobile.svg");
+  background-image: url("../images/bg-boost-mobile.svg");
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: right;
@@ -515,7 +515,7 @@ button {
 }
 @media (min-width: 600px) {
   .boost-links {
-    background-image: url("../../images/bg-boost-desktop.svg");
+    background-image: url("../images/bg-boost-desktop.svg");
     background-size: cover;
   }
 }
