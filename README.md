@@ -33,7 +33,7 @@
 
 ## About this project:
 
-<p>This project is a completed front-end challenge provided by <a href="https://www.frontendmentor.io/challenges" target="_blank">Front-end Mentor</a>, maded to train front-end skills, using HTML, Scss, Vanilla Javascript and API Fetch. This page provides business info, and the shorten links functionality.</p>
+<p>This project is a completed front-end challenge provided by <a href="https://www.frontendmentor.io/challenges" target="_blank">Front-end Mentor</a>, made to train front-end skills, using HTML, Scss, Vanilla Javascript and API Fetch. This page provides business info, and the shorten links functionality.</p>
 
 ### Functionalities:
 
