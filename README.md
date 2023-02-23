@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    <a href="https://ricardokanashiro.github.io/URL-Shortening-API-Landing-Page/">
+    <a href="https://ricardokanashiro.github.io/URL-Shortening-API-Landing-Page/" target="_blank">
         <img width="350px" src="readMeSrc/github-pages.svg" />
     </a>
 </p>
@@ -33,7 +33,7 @@
 
 ## About this project:
 
-<p>This project is a completed front-end challenge provided by <a href="https://www.frontendmentor.io/challenges">Front-end Mentor</a>, maded to train front-end skills, using HTML, Scss, Vanilla Javascript and API Fetch. This page provides business info, and the shorten links functionality.</p>
+<p>This project is a completed front-end challenge provided by <a href="https://www.frontendmentor.io/challenges" target="_blank">Front-end Mentor</a>, maded to train front-end skills, using HTML, Scss, Vanilla Javascript and API Fetch. This page provides business info, and the shorten links functionality.</p>
 
 ### Functionalities:
 
